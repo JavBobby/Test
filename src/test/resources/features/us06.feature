@@ -1,6 +1,6 @@
-
 Feature: Books module
   As a librarian, I should be able to add new book into library
+
 
   Scenario Outline: Verify added book is matching with DB
     Given the "librarian" on the home page
@@ -12,9 +12,10 @@ Feature: Books module
     When the librarian enter author "<Author>"
     And the librarian choose the book category "<Book Category>"
     And the librarian click to save changes
-    Then verify "The book has been created" message is displayed
+    Then verify "The book has been created." message is displayed
     And verify "<Book Name>" information must match with DB
     Examples:
-      | Book Name             | ISBN     | Year | Author          | Book Category        |
-      | Head First Java       | 10112021 | 2021 | Kathy Sierra    | Action and Adventure |
-      | The Scrum Field Guide | 11112021 | 2006 | Mitch Lacey     | Short Story          |
+      | Book Name                | ISBN     | Year | Author       | Book Category        |
+      | Clean Code AG            | 12112021 | 2021 | Kathy Sierra | Fantasy              |
+      | Head First Java AG       | 10112021 | 2021 | Kathy Sierra | Action and Adventure |
+      | The Scrum Field Guide AG | 11112021 | 2006 | Mitch Lacey  | Short Story          |
